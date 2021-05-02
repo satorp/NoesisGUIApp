@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?> 
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Noesis">
+    <NoesisSDKDir>C:\Dev\Noesis\3.0.11</NoesisSDKDir>
+    <NoesisLib>Noesis.lib</NoesisLib>
+    <NoesisAppLib>NoesisApp.lib</NoesisAppLib>
+    <NoesisIncludeDir>$(NoesisSDKDir)\Include</NoesisIncludeDir>
+    <NoesisAppIncludeDir>$(NoesisSDKDir)\Src\Packages\App\ApplicationLauncher\Include;$(NoesisSDKDir)\Src\Packages\App\Display\Include;$(NoesisSDKDir)\Src\Packages\App\DisplayLauncher\Include;$(NoesisSDKDir)\Src\Packages\App\Interactivity\Include;$(NoesisSDKDir)\Src\Packages\App\Launcher\Include;$(NoesisSDKDir)\Src\Packages\App\MediaElement\Include;$(NoesisSDKDir)\Src\Packages\App\Providers\Include;$(NoesisSDKDir)\Src\Packages\App\Theme\Include;$(NoesisSDKDir)\Src\Packages\App\Win32Display\Include</NoesisAppIncludeDir>
+    <NoesisSrcDir>$(NoesisSDKDir)\Src\Packages</NoesisSrcDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Noesis" Condition="'$(Platform)'=='Win32'">
+    <NoesisBinDir>$(NoesisSDKDir)\Bin\windows_x86</NoesisBinDir>
+    <NoesisLibDir>$(NoesisSDKDir)\Lib\windows_x86</NoesisLibDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Noesis" Condition="'$(Platform)'=='x64'">
+    <NoesisBinDir>$(NoesisSDKDir)\Bin\windows_x86_64</NoesisBinDir>
+    <NoesisLibDir>$(NoesisSDKDir)\Lib\windows_x86_64</NoesisLibDir>
+  </PropertyGroup>
+</Project>
