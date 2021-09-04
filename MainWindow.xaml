@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:$safeprojectname$"
         mc:Ignorable="d"
-        Background="#FF124C7A" Height="350" Width="525"
+        Background="{StaticResource Brush.Window.Background}" Height="350" Width="525"
         Title="NoesisGUI - Hello, World!">
   <Grid>
     <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" Foreground="White" Text="Hello, World!"/>

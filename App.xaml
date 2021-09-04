@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:$safeprojectname$"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-    </Application.Resources>
+  <Application.Resources>
+    <ResourceDictionary Source="pack://application:,,,/Theme;component/Theme/NoesisTheme.DarkBlue.xaml" />
+  </Application.Resources>
 </Application>
