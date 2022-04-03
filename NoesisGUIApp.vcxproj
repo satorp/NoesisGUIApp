@@ -47,13 +47,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(NoesisIncludeDir);$(NoesisAppIncludeDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(NoesisLibDir);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(NoesisLibDir)\$(Configuration);$(NoesisLibDir);$(LibraryPath)</LibraryPath>
     <SourcePath>$(NoesisSrcDir);$(SourcePath)</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>$(NoesisIncludeDir);$(NoesisAppIncludeDir);$(IncludePath)</IncludePath>
-    <LibraryPath>$(NoesisLibDir);$(LibraryPath)</LibraryPath>
+    <LibraryPath>$(NoesisLibDir)\$(Configuration);$(NoesisLibDir);$(LibraryPath)</LibraryPath>
     <SourcePath>$(NoesisSrcDir);$(SourcePath)</SourcePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -88,8 +88,8 @@
   </ItemDefinitionGroup>
   <ItemGroup Label="CopyToOutDir">
     <XamlFiles Include="*.xaml" />
-    <NoesisDlls Include="$(NoesisBinDir)\Noesis*.dll" />
-    <NoesisPdbs Include="$(NoesisBinDir)\Noesis*.pdb" />
+    <NoesisDlls Include="$(NoesisBinDir)\Noesis*.dll;$(NoesisBinDir)\$(Configuration)\Noesis*.dll" />
+    <NoesisPdbs Include="$(NoesisBinDir)\Noesis*.pdb;$(NoesisBinDir)\$(Configuration)\Noesis*.pdb" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
