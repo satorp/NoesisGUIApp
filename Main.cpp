@@ -8,6 +8,10 @@
 #include <NsApp/Application.h>
 #include <NsApp/Window.h>
 #include <NsGui/IntegrationAPI.h>
+#ifdef _DEBUG
+#include <windows.h>
+#include <strsafe.h>
+#endif
 
 namespace $safeprojectname$
 {
@@ -40,8 +44,21 @@ namespace $safeprojectname$
 
 int NsMain(int argc, char** argv)
 {
+#ifdef _DEBUG
+    Noesis::GUI::SetErrorHandler([](const char* file, uint32_t line, const char* message, bool fatal)
+        {
+            char buf[512];
+            ::StringCchPrintfA(buf, _countof(buf), "[%s] %s (%s:%d)\n",
+                (fatal ? "FATAL" : "ERROR"),
+                message,
+                file,
+                line);
+            ::OutputDebugStringA(buf);
+        });
+#endif
+
     // Remove this line to enable Inspector
-	Noesis::GUI::DisableInspector();
+    Noesis::GUI::DisableInspector();
 
     $safeprojectname$::AppLauncher launcher;
     launcher.SetArguments(argc, argv);
