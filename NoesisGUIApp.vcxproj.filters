@@ -29,4 +29,7 @@
       <Filter>Source Files</Filter>
     </ApplicationDefinition>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Directory.Build.props" />
+  </ItemGroup>
 </Project>
