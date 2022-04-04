@@ -6,8 +6,8 @@ A Visual C++ project template for simple [Noesis GUI](https://www.noesisengine.c
 - Visual Studio 2019 or later (untested in older versions)
 
 # Getting started
-- If you have not done so, download and install the Noesis GUI SDK (just need to unzip to a folder). Take note of its directory location.
-- Copy the distribution zip file to Visual C++ user template directory (`%USERPROFILE%\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C++ Project`).
+- If you have not done so, download and install (unzip) the Noesis GUI SDK. Take note of its directory location.
+- Copy NoesisGUIApp distribution zip file to Visual C++ user template directory (`%USERPROFILE%\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C++ Project`).
 You may also deploy it to system-wide template directory. See [here](https://docs.microsoft.com/en-us/visualstudio/ide/how-to-locate-and-organize-project-and-item-templates?view=vs-2019) for details.
 - Restart Visual Studio
 
