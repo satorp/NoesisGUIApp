@@ -21,7 +21,6 @@
       <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="Main.cpp">Main.cpp</ProjectItem>
       <ProjectItem ReplaceParameters="true" TargetFileName="MainWindow.xaml">MainWindow.xaml</ProjectItem>
       <ProjectItem ReplaceParameters="false" TargetFileName="Directory.Build.props">Directory.Build.props</ProjectItem>
-      <ProjectItem ReplaceParameters="false" TargetFileName="README.md">README.md</ProjectItem>
     </Project>
   </TemplateContent>
 </VSTemplate>
